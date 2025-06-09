@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Personal Budget Tracker</h1>
+    <div class="back">
+        <div>
+            <div class="form-head">
+                <h2>Add Income & Expense</h2>
+            </div>
+            <div class="container">
+                <div class="form-body">
+                    <form id="incomeForm" class="form">
+                        <h3>Income Form</h3>
+                        <label for="incomeTitle">Source of Income:</label>
+                        <input type="text" id="incomeTitle" placeholder="Enter Source of Income" required>
+                        <label for="incomeAmount">Income Amount:</label>
+                        <input type="number" id="incomeAmount" placeholder="Enter Income Amount" required>
+                        <button type="submit">+ Add Income</button>
+                    </form>
+                </div>
+                <div class="form-body">
+                    <form id="expenseForm" class="form">
+                        <h3>Expense Form</h3>
+                        <label for="expenseTitle">Name Of Expense:</label>
+                        <input type="text" id="expenseTitle" placeholder="Enter Name Of Expense" required>
+                        <label for="expenseAmount">Expense Amount:</label>
+                        <input type="number" id="expenseAmount" placeholder="Enter Expense Amount" required>
+                        <button type="submit">- Add Expense</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="summary" class="summary">
+            <div id="summary-head">        
+                <h2>Budget Summary</h2>
+            </div>
+            <div id="summary-body" class="summary-body">
+                <div class="summary-data">Total Income: <span id="totalIncome">0</span></div>
+                <div class="summary-data">Total Expense: <span id="totalExpense">0</span></div>
+                <div class="summary-data">Remaining Balance: <span id="totalBalance">0</span></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="list">
+                <div id="incomeListHead" class="list-head">
+                    <h3>Income List</h3>    
+                </div>
+                <div id="incomeListBody" class="list-body">
+                    <ul id="incomeList"></ul>
+                </div>
+            </div>
+            <div class="list">
+                <div id="expenseListHead" class="list-head">   
+                    <h3>Expense List</h3>
+                </div>
+                <div id="expenseListBody" class="list-body">
+                    <ul id="expenseList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
